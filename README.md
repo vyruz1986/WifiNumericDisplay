@@ -2,7 +2,9 @@
 
 ## Introduction
 
-This project is a generic 4-digit 7-segment numeric display which can be controlled over WiFi
+This project is a generic 4-digit 7-segment numeric display which can be controlled over WiFi.
+It uses a Wemos D1 Mini MCU and TPIC6B595 power logic shift registers to control pieces of powerful, very bright 24V LED strip segments.
+These displays are highly visible even in bright sunlight over a long distance (used in Fyball competitions where viewing distance is around 30 meters).
 
 It was created for use in Flyball, but can easily be applied elsewhere
 
@@ -22,6 +24,8 @@ to allow for better visibility (moar light!):
 | ----------------- | --------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
 | Digit segment		| [12 SMD LEDs per segment (200mcd)](https://www.sparkfun.com/datasheets/Components/YSD-1600AR6F-89.pdf) driven with 12V	| 10cm of [24V 240 LED/meter strip](http://s.click.aliexpress.com/e/3zjiyZV)	| These are larger, more powerful LEDs which are also denser positioned.	|
 | Segment driver	| [TPIC6C596](https://cdn.sparkfun.com/datasheets/Widgets/TPIC6C596.pdf) | [TPIC6B595](https://www.reichelt.de/?ACTION=3;ARTICLE=147328;SEARCH=tpic) | Compatible chip which can handle the extra current that out LED strip segments will draw |
+
+I will complete this section later with a description on how to make the display using 10cm LED strip pieces and an aluminium plate to mount them on.
 
 ## Flashing the firmware
 
