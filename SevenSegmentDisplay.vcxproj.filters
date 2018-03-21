@@ -16,6 +16,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="SevenSegmentDisplay.ino" />
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="__vm\.SevenSegmentDisplay.vsarduino.h">
@@ -27,6 +28,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="NetworkServerLib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LICENSE">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

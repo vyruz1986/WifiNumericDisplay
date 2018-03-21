@@ -8,6 +8,19 @@ It was created for use in Flyball, but can easily be applied elsewhere
 
 ## Hardware
 
+-Under construction-
+
+Basically this is a 'beefed up' version of [Sparkfun's large 7 segment displays](https://www.sparkfun.com/products/8530)
+together with [Sparkfun's accompanying large digit driver boards](https://www.sparkfun.com/products/13279).
+
+The code is 1:1 compatible, the difference with my project is that I use the following components
+to allow for better visibility (moar light!):
+
+|Part type			| Sparkfun part						| My Part																	| Description																|
+| ----------------- | --------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| Digit segment		| [12 SMD LEDs per segment (200mcd)](https://www.sparkfun.com/datasheets/Components/YSD-1600AR6F-89.pdf) driven with 12V	| 10cm of [24V 240 LED/meter strip](http://s.click.aliexpress.com/e/3zjiyZV)	| These are larger, more powerful LEDs which are also denser positioned.	|
+| Segment driver	| [TPIC6C596](https://cdn.sparkfun.com/datasheets/Widgets/TPIC6C596.pdf) | [TPIC6B595](https://www.reichelt.de/?ACTION=3;ARTICLE=147328;SEARCH=tpic) | Compatible chip which can handle the extra current that out LED strip segments will draw |
+
 ## Flashing the firmware
 
 The firmware should flash just fine using the Arduino IDE with ESP8266 support. Open the `SevenSegmentDisplay.ino` file, select Wemos D1 mini as the board and hit flash.

@@ -74,6 +74,7 @@
     <ProjectCapability Include="VisualMicro" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="README.md" />
     <None Include="SevenSegmentDisplay.ino" />
   </ItemGroup>
   <ItemGroup>
@@ -81,6 +82,7 @@
     <ClInclude Include="__vm\.SevenSegmentDisplay.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="LICENSE" />
     <ClCompile Include="NetworkServerLib.cpp" />
   </ItemGroup>
   <PropertyGroup>
