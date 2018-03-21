@@ -6,6 +6,8 @@ This project is a generic 4-digit 7-segment numeric display which can be control
 
 It was created for use in Flyball, but can easily be applied elsewhere
 
+Pictures & video: https://goo.gl/photos/G3tg8hrfvAJZ6PEY8
+
 ## Hardware
 
 -Under construction-
