@@ -16,16 +16,17 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+#include <Arduino.h>
 #include <FS.h> //this needs to be first, or it all crashes and burns...
 #include <WiFiManager.h>
 #include <DNSServer.h>
 #include <ESP8266WebServer.h>
-#include "NetworkServerLib.h"
+#include <NetworkServer.h>
 #include <ESP8266WiFi.h>
 #include <ESP8266mDNS.h>
 #include <ArduinoOTA.h>
 #include <math.h>
-#include <ArduinoJson.h> //https://github.com/bblanchon/ArduinoJson
+#include <ArduinoJson.h>
 
 /**************************** Wifi Configuration ****************************/
 String strHostname;
@@ -40,13 +41,6 @@ char static_sn[16] = "";
 
 //flag for saving data
 bool shouldSaveConfig = false;
-
-//callback notifying us of the need to save config
-void saveConfigCallback()
-{
-   Serial.println("Should save config");
-   shouldSaveConfig = true;
-}
 
 /**************************** Secure Parameters - Do not publish!!!***********/
 //OTA firmware upgrade password - Must match the one in board.txt file
@@ -85,15 +79,35 @@ byte bPrevledState = HIGH;
 unsigned long ulButtonDepressTime = 0;
 
 //Activity LED
-#define ACTIVITY_LED_PIN BUILTIN_LED
+#define ACTIVITY_LED_PIN LED_BUILTIN
 unsigned long ulLEDLinkInterval = 1000; //every second
 unsigned long ulLEDOnTime = 0;
 
+void ResetNetwork();
+void HandleNWResetButton();
+void HandleActivityLED();
+void HandleWifiConfig();
+void StopCountDownTimer();
+void StartCountDownTimer(unsigned int iSeconds);
+void HandleCountDownTimer();
+void serialEvent();
+void postNumber(byte number, boolean decimal);
+void ShowNumber(long lValue, uint8_t iNumDecimals);
+void ClearDisplay();
+void saveConfigCallback();
+
 void setup()
 {
-   Serial.begin(115200);
-   //Serial.setDebugOutput(false);
+   Serial.begin(74880);
    Serial.println();
+   String realSize = String(ESP.getFlashChipRealSize());
+   String ideSize = String(ESP.getFlashChipSize());
+   bool flashCorrectlyConfigured = realSize.equals(ideSize);
+   if (flashCorrectlyConfigured)
+      SPIFFS.begin();
+   else
+      Serial.println("flash incorrectly configured, SPIFFS cannot start, IDE size: " + ideSize + ", real size: " + realSize);
+
    Serial.println("Starting setup...");
    //configure IO pins
    pinMode(RESET_NW_PIN, INPUT);
@@ -211,7 +225,7 @@ void loop()
       {
          StopCountDownTimer();
          ShowNumber(strInputData.toInt(), 2);
-         Serial.printf("Showing number: %i ...\r\n", strInputData.toInt());
+         Serial.printf("Showing number: %li ...\r\n", strInputData.toInt());
       }
       else
       {
@@ -226,7 +240,7 @@ void loop()
 
    if (millis() - ulLastAlivePing > ALIVE_PING_INTERVAL)
    {
-      Serial.printf("Alive for %i seconds!\r\n", millis() / 1000);
+      Serial.printf("Alive for %li seconds!\r\n", millis() / 1000);
       ulLastAlivePing = millis();
    }
 
@@ -270,7 +284,7 @@ void ShowNumber(long lValue, uint8_t iNumDecimals)
          //Don't display prefix zeroes
          remainder = ' ';
       }
-      Serial.printf("Calling PostNumber with data: %i (lVal: %i, x: %i)\r\n", remainder, lValue, x);
+      Serial.printf("Calling PostNumber with data: %i (lVal: %li, x: %i)\r\n", remainder, lValue, x);
       postNumber(remainder, (x == iNumDecimals && iNumDecimals > 0));
 
       lValue /= 10;
@@ -305,7 +319,7 @@ void postNumber(byte number, boolean decimal)
 #define g 1 << 2
 #define dp 1 << 7
 
-   byte segments;
+   byte segments = 0;
 
    switch (number)
    {
@@ -387,7 +401,7 @@ void HandleCountDownTimer()
 
    //How far are we?
    unsigned int iTimeExpired = (millis() - ulCountDownStartTime) / 1000;
-   if (iCountDownTimer - iTimeExpired != iCountDownCurrentValue)
+   if ((int)(iCountDownTimer - iTimeExpired) != iCountDownCurrentValue)
    {
       ShowNumber(iCountDownTimer - iTimeExpired, 0);
       iCountDownCurrentValue = iCountDownTimer - iTimeExpired;
@@ -605,4 +619,11 @@ void ResetNetwork()
    ESP.eraseConfig();
    delay(3000);
    ESP.restart();
+}
+
+//callback notifying us of the need to save config
+void saveConfigCallback()
+{
+   Serial.println("Should save config");
+   shouldSaveConfig = true;
 }
