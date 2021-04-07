@@ -1,0 +1,718 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr User 11693 10553
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	8100 6100 8200 6100
+Wire Wire Line
+	8200 6100 8200 5900
+Wire Wire Line
+	8200 5900 6700 5900
+Wire Wire Line
+	6700 5900 6700 4600
+Wire Wire Line
+	6700 4600 6900 4600
+Wire Wire Line
+	6500 4400 6800 4400
+Wire Wire Line
+	6800 4400 6900 4400
+Wire Wire Line
+	6900 5000 6800 5000
+Wire Wire Line
+	6800 5000 6800 4400
+Connection ~ 6800 4400
+Text Label 6500 4400 0    10   ~ 0
++5V
+Wire Wire Line
+	6500 6100 6800 6100
+Wire Wire Line
+	6800 6100 6900 6100
+Wire Wire Line
+	6900 6700 6800 6700
+Wire Wire Line
+	6800 6700 6800 6100
+Connection ~ 6800 6100
+Text Label 6500 6100 0    10   ~ 0
++5V
+Wire Wire Line
+	6500 2600 6800 2600
+Wire Wire Line
+	6800 2600 6900 2600
+Wire Wire Line
+	6900 3200 6800 3200
+Wire Wire Line
+	6800 3200 6800 2600
+Connection ~ 6800 2600
+Text Label 6500 2600 0    10   ~ 0
++5V
+Wire Wire Line
+	6500 900  6800 900 
+Wire Wire Line
+	6800 900  6900 900 
+Wire Wire Line
+	6900 1500 6800 1500
+Wire Wire Line
+	6800 1500 6800 900 
+Connection ~ 6800 900 
+Text Label 6500 900  0    10   ~ 0
++5V
+Wire Wire Line
+	4800 6800 5000 6800
+Text Label 4800 6800 0    10   ~ 0
++5V
+Wire Wire Line
+	4300 5300 4300 5500
+Text Label 4300 5300 0    10   ~ 0
++5V
+Wire Wire Line
+	2900 6700 3000 6700
+Text Label 2900 6700 0    10   ~ 0
++5V
+Wire Wire Line
+	6900 6500 6600 6500
+Text Label 6600 6500 2    70   ~ 0
+CLOCK
+Wire Wire Line
+	4800 6400 4900 6400
+Text Label 4900 6400 0    70   ~ 0
+CLOCK
+Wire Wire Line
+	6900 4800 6600 4800
+Text Label 6600 4800 2    70   ~ 0
+CLOCK
+Wire Wire Line
+	6900 3000 6600 3000
+Text Label 6600 3000 2    70   ~ 0
+CLOCK
+Wire Wire Line
+	6900 1300 6600 1300
+Text Label 6600 1300 2    70   ~ 0
+CLOCK
+Wire Wire Line
+	4800 6500 5300 6500
+Text Label 5300 6500 0    70   ~ 0
+LATCH
+Wire Wire Line
+	6900 4900 6200 4900
+Text Label 6200 4900 2    70   ~ 0
+LATCH
+Wire Wire Line
+	6900 6600 6200 6600
+Text Label 6200 6600 2    70   ~ 0
+LATCH
+Wire Wire Line
+	6900 3100 6200 3100
+Text Label 6200 3100 2    70   ~ 0
+LATCH
+Wire Wire Line
+	6900 1400 6200 1400
+Text Label 6200 1400 2    70   ~ 0
+LATCH
+Wire Wire Line
+	4800 6300 6900 6300
+Wire Wire Line
+	6600 5500 6800 5500
+Wire Wire Line
+	6800 5500 6900 5500
+Wire Wire Line
+	6900 5100 6800 5100
+Wire Wire Line
+	6800 5100 6800 5500
+Connection ~ 6800 5500
+Text Label 6600 5500 0    10   ~ 0
+GND
+Wire Wire Line
+	6600 7200 6800 7200
+Wire Wire Line
+	6800 7200 6900 7200
+Wire Wire Line
+	6900 6800 6800 6800
+Wire Wire Line
+	6800 6800 6800 7200
+Connection ~ 6800 7200
+Text Label 6600 7200 0    10   ~ 0
+GND
+Wire Wire Line
+	6600 3700 6800 3700
+Wire Wire Line
+	6800 3700 6900 3700
+Wire Wire Line
+	6900 3300 6800 3300
+Wire Wire Line
+	6800 3300 6800 3700
+Connection ~ 6800 3700
+Text Label 6600 3700 0    10   ~ 0
+GND
+Wire Wire Line
+	6600 2000 6800 2000
+Wire Wire Line
+	6800 2000 6900 2000
+Wire Wire Line
+	6900 1600 6800 1600
+Wire Wire Line
+	6800 1600 6800 2000
+Connection ~ 6800 2000
+Text Label 6600 2000 0    10   ~ 0
+GND
+Wire Wire Line
+	4800 6700 5100 6700
+Text Label 4800 6700 0    10   ~ 0
+GND
+Wire Wire Line
+	3900 3700 3900 3900
+Text Label 3900 3700 0    10   ~ 0
+GND
+Wire Wire Line
+	3900 5300 3900 5500
+Text Label 3900 5300 0    10   ~ 0
+GND
+Wire Wire Line
+	4100 2700 4400 2700
+Text Label 4100 2700 0    10   ~ 0
+GND
+Wire Wire Line
+	8100 6300 8400 6300
+Wire Wire Line
+	8100 6400 8400 6400
+Wire Wire Line
+	8100 6500 8400 6500
+Wire Wire Line
+	8100 6600 8400 6600
+Wire Wire Line
+	8100 6700 8800 6700
+Wire Wire Line
+	8100 6800 8800 6800
+Wire Wire Line
+	8100 6900 8800 6900
+Wire Wire Line
+	8100 7000 8800 7000
+Wire Wire Line
+	4300 3700 4300 3800
+Wire Wire Line
+	4300 3800 4300 3900
+Wire Wire Line
+	4300 3800 4800 3800
+Wire Wire Line
+	4800 3800 4800 3700
+Wire Wire Line
+	4800 3700 4800 3600
+Wire Wire Line
+	4800 3600 4800 3500
+Wire Wire Line
+	4800 3500 5100 3500
+Wire Wire Line
+	4800 3600 5100 3600
+Wire Wire Line
+	4800 3700 5100 3700
+Wire Wire Line
+	5100 3800 4800 3800
+Wire Wire Line
+	5100 3900 4800 3900
+Wire Wire Line
+	4800 3900 4800 3800
+Connection ~ 4300 3800
+Connection ~ 4800 3600
+Connection ~ 4800 3700
+Connection ~ 4800 3800
+Text Label 4300 3700 0    10   ~ 0
++24V
+Wire Wire Line
+	4100 2600 4300 2600
+Text Label 4100 2600 0    10   ~ 0
++24V
+Wire Wire Line
+	8100 4600 8400 4600
+Wire Wire Line
+	8100 4700 8400 4700
+Wire Wire Line
+	8100 4800 8400 4800
+Wire Wire Line
+	8100 4900 8400 4900
+Wire Wire Line
+	8100 5000 8800 5000
+Wire Wire Line
+	8100 5100 8800 5100
+Wire Wire Line
+	8100 5200 8800 5200
+Wire Wire Line
+	8100 5300 8800 5300
+Wire Wire Line
+	8200 4400 8200 4100
+Wire Wire Line
+	8200 4100 6700 4100
+Wire Wire Line
+	6700 4100 6700 2800
+Wire Wire Line
+	6700 2800 6900 2800
+Wire Wire Line
+	8100 4400 8200 4400
+Wire Wire Line
+	8100 2800 8400 2800
+Wire Wire Line
+	8100 2900 8400 2900
+Wire Wire Line
+	8100 3000 8400 3000
+Wire Wire Line
+	8100 3100 8400 3100
+Wire Wire Line
+	8100 3200 8800 3200
+Wire Wire Line
+	8100 3300 8800 3300
+Wire Wire Line
+	8100 3400 8800 3400
+Wire Wire Line
+	8100 3500 8800 3500
+Wire Wire Line
+	8200 2600 8200 2400
+Wire Wire Line
+	8200 2400 6700 2400
+Wire Wire Line
+	6700 2400 6700 1100
+Wire Wire Line
+	6700 1100 6900 1100
+Wire Wire Line
+	8100 2600 8200 2600
+Wire Wire Line
+	8100 1100 8400 1100
+Wire Wire Line
+	8100 1200 8400 1200
+Wire Wire Line
+	8100 1300 8400 1300
+Wire Wire Line
+	8100 1400 8400 1400
+Wire Wire Line
+	8100 1500 8800 1500
+Wire Wire Line
+	8100 1600 8800 1600
+Wire Wire Line
+	8100 1700 8800 1700
+Wire Wire Line
+	8100 1800 8800 1800
+Wire Wire Line
+	3400 6700 3500 6700
+$Comp
+L FlyballDisplay-eagle-import:TPIC6B595PTH U1
+U 1 1 94FABF20
+P 7500 6700
+F 0 "U1" H 7010 7420 59  0000 L BNN
+F 1 "TPIC6B595PTH" H 7000 5900 59  0000 L BNN
+F 2 "FlyballDisplay:DIL20" H 7500 6700 50  0001 C CNN
+F 3 "" H 7500 6700 50  0001 C CNN
+	1    7500 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:TPIC6B595PTH U2
+U 1 1 4E0AB7A9
+P 7500 5000
+F 0 "U2" H 7010 5720 59  0000 L BNN
+F 1 "TPIC6B595PTH" H 7000 4200 59  0000 L BNN
+F 2 "FlyballDisplay:DIL20" H 7500 5000 50  0001 C CNN
+F 3 "" H 7500 5000 50  0001 C CNN
+	1    7500 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:WEMOS-D1-MINI WEMOS1
+U 1 1 87A77770
+P 4100 6500
+F 0 "WEMOS1" H 3700 7000 59  0000 L BNN
+F 1 "WEMOS-D1-MINI" H 3800 5900 59  0000 L BNN
+F 2 "FlyballDisplay:WEMOS-D1-MINI" H 4100 6500 50  0001 C CNN
+F 3 "" H 4100 6500 50  0001 C CNN
+	1    4100 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:+5V #P+01
+U 1 1 6A081B6E
+P 6400 4400
+F 0 "#P+01" H 6400 4400 50  0001 C CNN
+F 1 "+5V" V 6300 4200 59  0000 L BNN
+F 2 "" H 6400 4400 50  0001 C CNN
+F 3 "" H 6400 4400 50  0001 C CNN
+	1    6400 4400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:+5V #P+02
+U 1 1 637B3A6A
+P 6400 6100
+F 0 "#P+02" H 6400 6100 50  0001 C CNN
+F 1 "+5V" V 6300 5900 59  0000 L BNN
+F 2 "" H 6400 6100 50  0001 C CNN
+F 3 "" H 6400 6100 50  0001 C CNN
+	1    6400 6100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:GND #GND01
+U 1 1 8DA2BB24
+P 6500 7200
+F 0 "#GND01" H 6500 7200 50  0001 C CNN
+F 1 "GND" H 6400 7100 59  0000 L BNN
+F 2 "" H 6500 7200 50  0001 C CNN
+F 3 "" H 6500 7200 50  0001 C CNN
+	1    6500 7200
+	0    1    1    0   
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:GND #GND02
+U 1 1 4877C9E2
+P 6500 5500
+F 0 "#GND02" H 6500 5500 50  0001 C CNN
+F 1 "GND" H 6400 5400 59  0000 L BNN
+F 2 "" H 6500 5500 50  0001 C CNN
+F 3 "" H 6500 5500 50  0001 C CNN
+	1    6500 5500
+	0    1    1    0   
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:PINHD-1X4 JP1
+U 1 1 0B60073D
+P 8500 6500
+F 0 "JP1" H 8250 6825 59  0000 L BNN
+F 1 "PINHD-1X4" H 8250 6200 59  0000 L BNN
+F 2 "FlyballDisplay:1X04" H 8500 6500 50  0001 C CNN
+F 3 "" H 8500 6500 50  0001 C CNN
+	1    8500 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:PINHD-1X4 JP2
+U 1 1 BAFA783C
+P 8900 6900
+F 0 "JP2" H 8650 7225 59  0000 L BNN
+F 1 "PINHD-1X4" H 8650 6600 59  0000 L BNN
+F 2 "FlyballDisplay:1X04" H 8900 6900 50  0001 C CNN
+F 3 "" H 8900 6900 50  0001 C CNN
+	1    8900 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:PINHD-1X4 JP3
+U 1 1 8182258E
+P 8500 4800
+F 0 "JP3" H 8250 5125 59  0000 L BNN
+F 1 "PINHD-1X4" H 8250 4500 59  0000 L BNN
+F 2 "FlyballDisplay:1X04" H 8500 4800 50  0001 C CNN
+F 3 "" H 8500 4800 50  0001 C CNN
+	1    8500 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:PINHD-1X4 JP4
+U 1 1 193933AB
+P 8900 5200
+F 0 "JP4" H 8650 5525 59  0000 L BNN
+F 1 "PINHD-1X4" H 8650 4900 59  0000 L BNN
+F 2 "FlyballDisplay:1X04" H 8900 5200 50  0001 C CNN
+F 3 "" H 8900 5200 50  0001 C CNN
+	1    8900 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:TPIC6B595PTH U3
+U 1 1 C6A83FC2
+P 7500 3200
+F 0 "U3" H 7010 3920 59  0000 L BNN
+F 1 "TPIC6B595PTH" H 7000 2400 59  0000 L BNN
+F 2 "FlyballDisplay:DIL20" H 7500 3200 50  0001 C CNN
+F 3 "" H 7500 3200 50  0001 C CNN
+	1    7500 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:+5V #P+05
+U 1 1 57F4DC09
+P 6400 2600
+F 0 "#P+05" H 6400 2600 50  0001 C CNN
+F 1 "+5V" V 6300 2400 59  0000 L BNN
+F 2 "" H 6400 2600 50  0001 C CNN
+F 3 "" H 6400 2600 50  0001 C CNN
+	1    6400 2600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:GND #GND03
+U 1 1 21137572
+P 6500 3700
+F 0 "#GND03" H 6500 3700 50  0001 C CNN
+F 1 "GND" H 6400 3600 59  0000 L BNN
+F 2 "" H 6500 3700 50  0001 C CNN
+F 3 "" H 6500 3700 50  0001 C CNN
+	1    6500 3700
+	0    1    1    0   
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:PINHD-1X4 JP5
+U 1 1 056852D9
+P 8500 3000
+F 0 "JP5" H 8250 3325 59  0000 L BNN
+F 1 "PINHD-1X4" H 8250 2700 59  0000 L BNN
+F 2 "FlyballDisplay:1X04" H 8500 3000 50  0001 C CNN
+F 3 "" H 8500 3000 50  0001 C CNN
+	1    8500 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:PINHD-1X4 JP6
+U 1 1 A21E5090
+P 8900 3400
+F 0 "JP6" H 8650 3725 59  0000 L BNN
+F 1 "PINHD-1X4" H 8650 3100 59  0000 L BNN
+F 2 "FlyballDisplay:1X04" H 8900 3400 50  0001 C CNN
+F 3 "" H 8900 3400 50  0001 C CNN
+	1    8900 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:TPIC6B595PTH U4
+U 1 1 AA9079E4
+P 7500 1500
+F 0 "U4" H 7010 2220 59  0000 L BNN
+F 1 "TPIC6B595PTH" H 7000 700 59  0000 L BNN
+F 2 "FlyballDisplay:DIL20" H 7500 1500 50  0001 C CNN
+F 3 "" H 7500 1500 50  0001 C CNN
+	1    7500 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:+5V #P+07
+U 1 1 FAFE20BD
+P 6400 900
+F 0 "#P+07" H 6400 900 50  0001 C CNN
+F 1 "+5V" V 6300 700 59  0000 L BNN
+F 2 "" H 6400 900 50  0001 C CNN
+F 3 "" H 6400 900 50  0001 C CNN
+	1    6400 900 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:GND #GND04
+U 1 1 12C122FD
+P 6500 2000
+F 0 "#GND04" H 6500 2000 50  0001 C CNN
+F 1 "GND" H 6400 1900 59  0000 L BNN
+F 2 "" H 6500 2000 50  0001 C CNN
+F 3 "" H 6500 2000 50  0001 C CNN
+	1    6500 2000
+	0    1    1    0   
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:PINHD-1X4 JP7
+U 1 1 ADC4B3B7
+P 8500 1300
+F 0 "JP7" H 8250 1625 59  0000 L BNN
+F 1 "PINHD-1X4" H 8250 1000 59  0000 L BNN
+F 2 "FlyballDisplay:1X04" H 8500 1300 50  0001 C CNN
+F 3 "" H 8500 1300 50  0001 C CNN
+	1    8500 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:PINHD-1X4 JP8
+U 1 1 357D3C8D
+P 8900 1700
+F 0 "JP8" H 8650 2025 59  0000 L BNN
+F 1 "PINHD-1X4" H 8650 1400 59  0000 L BNN
+F 2 "FlyballDisplay:1X04" H 8900 1700 50  0001 C CNN
+F 3 "" H 8900 1700 50  0001 C CNN
+	1    8900 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:+5V #P+09
+U 1 1 DD8F0AB4
+P 5100 6800
+F 0 "#P+09" H 5100 6800 50  0001 C CNN
+F 1 "+5V" V 5300 6700 59  0000 L BNN
+F 2 "" H 5100 6800 50  0001 C CNN
+F 3 "" H 5100 6800 50  0001 C CNN
+	1    5100 6800
+	0    1    1    0   
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:GND #GND05
+U 1 1 5B6A58CA
+P 5200 6700
+F 0 "#GND05" H 5200 6700 50  0001 C CNN
+F 1 "GND" H 5100 6600 59  0000 L BNN
+F 2 "" H 5200 6700 50  0001 C CNN
+F 3 "" H 5200 6700 50  0001 C CNN
+	1    5200 6700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:DC-DC-STEP-DOWN-LM2596 U$1
+U 1 1 89E33A62
+P 4100 4600
+F 0 "U$1" H 3600 5200 59  0000 L BNN
+F 1 "DC-DC-STEP-DOWN-LM2596" H 3600 5100 59  0000 L BNN
+F 2 "FlyballDisplay:DC-DC-STEP-DOWN-LM2596" H 4100 4600 50  0001 C CNN
+F 3 "" H 4100 4600 50  0001 C CNN
+	1    4100 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:+5V #P+010
+U 1 1 6665561A
+P 4300 5600
+F 0 "#P+010" H 4300 5600 50  0001 C CNN
+F 1 "+5V" V 4500 5500 59  0000 L BNN
+F 2 "" H 4300 5600 50  0001 C CNN
+F 3 "" H 4300 5600 50  0001 C CNN
+	1    4300 5600
+	-1   0    0    1   
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:+24V #P+011
+U 1 1 4D46F757
+P 4300 3600
+F 0 "#P+011" H 4300 3600 50  0001 C CNN
+F 1 "+24V" V 4200 3400 59  0000 L BNN
+F 2 "" H 4300 3600 50  0001 C CNN
+F 3 "" H 4300 3600 50  0001 C CNN
+	1    4300 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:GND #GND06
+U 1 1 F6847280
+P 3900 5600
+F 0 "#GND06" H 3900 5600 50  0001 C CNN
+F 1 "GND" H 3800 5500 59  0000 L BNN
+F 2 "" H 3900 5600 50  0001 C CNN
+F 3 "" H 3900 5600 50  0001 C CNN
+	1    3900 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:GND #GND07
+U 1 1 C2693486
+P 3900 3600
+F 0 "#GND07" H 3900 3600 50  0001 C CNN
+F 1 "GND" H 3800 3500 59  0000 L BNN
+F 2 "" H 3900 3600 50  0001 C CNN
+F 3 "" H 3900 3600 50  0001 C CNN
+	1    3900 3600
+	-1   0    0    1   
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:02-JST PWR1
+U 1 1 424A80B2
+P 3900 2700
+F 0 "PWR1" H 3940 2670 51  0000 L BNN
+F 1 "02-JST" H 3740 2760 59  0001 L BNN
+F 2 "FlyballDisplay:B2B-XH" H 3900 2700 50  0001 C CNN
+F 3 "" H 3900 2700 50  0001 C CNN
+	1    3900 2700
+	-1   0    0    1   
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:02-JST PWR1
+U 2 1 424A80BE
+P 3900 2600
+F 0 "PWR1" H 3940 2570 51  0000 L BNN
+F 1 "02-JST" H 3740 2660 59  0001 L BNN
+F 2 "FlyballDisplay:B2B-XH" H 3900 2600 50  0001 C CNN
+F 3 "" H 3900 2600 50  0001 C CNN
+	2    3900 2600
+	-1   0    0    1   
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:+24V #P+012
+U 1 1 BC83E68F
+P 4400 2600
+F 0 "#P+012" H 4400 2600 50  0001 C CNN
+F 1 "+24V" V 4300 2400 59  0000 L BNN
+F 2 "" H 4400 2600 50  0001 C CNN
+F 3 "" H 4400 2600 50  0001 C CNN
+	1    4400 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:GND #GND08
+U 1 1 E3161DBF
+P 4500 2700
+F 0 "#GND08" H 4500 2700 50  0001 C CNN
+F 1 "GND" H 4400 2600 59  0000 L BNN
+F 2 "" H 4500 2700 50  0001 C CNN
+F 3 "" H 4500 2700 50  0001 C CNN
+	1    4500 2700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:PINHD-1X5 +24V1
+U 1 1 02C447C0
+P 5200 3700
+F 0 "+24V1" H 4950 4025 59  0000 L BNN
+F 1 "PINHD-1X5" H 4950 3300 59  0000 L BNN
+F 2 "FlyballDisplay:1X05" H 5200 3700 50  0001 C CNN
+F 3 "" H 5200 3700 50  0001 C CNN
+	1    5200 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:A4P-LOC #FRAME1
+U 1 1 CC96BE83
+P 2500 9700
+F 0 "#FRAME1" H 2500 9700 50  0001 C CNN
+F 1 "A4P-LOC" H 2500 9700 50  0001 C CNN
+F 2 "" H 2500 9700 50  0001 C CNN
+F 3 "" H 2500 9700 50  0001 C CNN
+	1    2500 9700
+	1    0    0    -1  
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:MOMENTARY-SWITCH-SPST-SMD-6.2MM-TALL S1
+U 1 1 788C9994
+P 3200 6700
+F 0 "S1" H 3200 6760 70  0000 C BNN
+F 1 "MOMENTARY-SWITCH-SPST-SMD-6.2MM-TALL" H 3200 6680 70  0001 C TNN
+F 2 "FlyballDisplay:TACTILE_SWITCH_SMD_6.2MM_TALL" H 3200 6700 50  0001 C CNN
+F 3 "" H 3200 6700 50  0001 C CNN
+	1    3200 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L FlyballDisplay-eagle-import:+5V #P+03
+U 1 1 48C2C5DB
+P 2800 6700
+F 0 "#P+03" H 2800 6700 50  0001 C CNN
+F 1 "+5V" V 3000 6500 59  0000 L BNN
+F 2 "" H 2800 6700 50  0001 C CNN
+F 3 "" H 2800 6700 50  0001 C CNN
+	1    2800 6700
+	0    -1   -1   0   
+$EndComp
+Text Notes 6300 9400 0    85   ~ 0
+FlyballDisplay board v1\nhttp://bit.ly/fbdisplay\nLICENSE: CC-BY-SA
+Text GLabel 6900 7000 0    10   BiDi ~ 0
+GND
+Text GLabel 6900 7100 0    10   BiDi ~ 0
+GND
+Text GLabel 6900 5300 0    10   BiDi ~ 0
+GND
+Text GLabel 6900 5400 0    10   BiDi ~ 0
+GND
+Text GLabel 6900 3500 0    10   BiDi ~ 0
+GND
+Text GLabel 6900 3600 0    10   BiDi ~ 0
+GND
+Text GLabel 6900 1800 0    10   BiDi ~ 0
+GND
+Text GLabel 6900 1900 0    10   BiDi ~ 0
+GND
+$EndSCHEMATC

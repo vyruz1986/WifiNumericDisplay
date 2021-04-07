@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name FlyballDisplay-eagle-import)(type Legacy)(uri ${KIPRJMOD}/FlyballDisplay-eagle-import.lib)(options "")(descr ""))
+)

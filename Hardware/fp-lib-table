@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name FlyballDisplay)(type KiCad)(uri "$(KIPRJMOD)/FlyballDisplay.pretty")(options "")(descr ""))
+)
