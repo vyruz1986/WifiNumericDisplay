@@ -16,10 +16,10 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "NetworkServerLib.h"
+#include "NetworkServer.h"
 #include <ESP8266WiFi.h>
 
-void NetworkServer::init(WiFiServer* Server)
+void NetworkServer::init(WiFiServer *Server)
 {
    _Server = Server;
    return;
@@ -35,7 +35,7 @@ void NetworkServer::Loop()
 String NetworkServer::GetOldestData()
 {
    String strReturnString;
-   
+
    if (!Available())
    {
       return strReturnString;
@@ -63,7 +63,6 @@ bool NetworkServer::Available()
    return false;
 }
 
-
 void NetworkServer::_NetworkAccept()
 {
    //Listen on server
@@ -85,8 +84,7 @@ void NetworkServer::_NetworkListen()
    for (auto &Client : _NetworkClients)
    {
       //Handle client disconnects
-      if (Client.bClientConnected
-         && !Client.ClientObj.connected())
+      if (Client.bClientConnected && !Client.ClientObj.connected())
       {
          //Client has closed connection, close it from our side as well
          _ResetNetworkClient(Client);
@@ -94,13 +92,11 @@ void NetworkServer::_NetworkListen()
       }
 
       //Serial.printf("Checking client %i: Connected %i(%i)\r\n", i, Client.bClientConnected, true);
-      if (Client.bClientConnected
-         && millis() - Client.iLastActivityTime > CLIENT_TIMEOUT
-         && Client.strReceivedData.length() > 0)
+      if (Client.bClientConnected && millis() - Client.iLastActivityTime > CLIENT_TIMEOUT && Client.strReceivedData.length() > 0)
       {
          //Timeout, reset buffer
          _ResetNetworkClient(Client);
-         Serial.printf("No data received after timeout (%i\s), resetting buffer...\r\n", CLIENT_TIMEOUT / 1000);
+         Serial.printf("No data received after timeout (%is), resetting buffer...\r\n", CLIENT_TIMEOUT / 1000);
       }
       else if (Client.ClientObj.available() > 0)
       {
@@ -129,7 +125,6 @@ void NetworkServer::_NetworkListen()
             Client.strReceivedData += cInChar; // Store it
          }
          Client.iLastActivityTime = millis();
-
       }
       i++;
    }
@@ -138,38 +133,32 @@ void NetworkServer::_NetworkListen()
 NetworkServer::_NetworkClient &NetworkServer::_GetFreeNetworkClient()
 {
    _NetworkClient &OldestClient = _NetworkClients[0];
-   bool bFreeClientFound = false;
    uint8_t i = 0;
    uint8_t iOldestClient = 0;
    for (auto &Client : _NetworkClients)
    {
-      Serial.printf("Client %i last active: %lu\r\n", i, Client.iLastActivityTime);
+      Serial.printf("Client %i last active: %i\r\n", i, Client.iLastActivityTime);
       //Keep track of oldest client in case we have no more free ones
       if (Client.iLastActivityTime < OldestClient.iLastActivityTime)
       {
          OldestClient = Client;
          iOldestClient = i;
       }
-      if (!Client.bClientConnected
-         && Client.strReceivedData.length() == 0)
+      if (!Client.bClientConnected && Client.strReceivedData.length() == 0)
       {
          //Free client found, assign it
          Serial.printf("Found free client: %i\r\n", i);
-         bFreeClientFound = true;
          return Client;
       }
       i++;
    }
-   
-   if (!bFreeClientFound)
-   {
-      //No free client is found.
-      //Reset oldest (kick it out) and return that one
-      Serial.printf("Using oldest client (%i) with alive time of %lu\r\n", iOldestClient, OldestClient.iLastActivityTime);
-      _ResetNetworkClient(OldestClient);
-      _DisconnectNetworkClient(OldestClient);
-      return OldestClient;
-   }
+
+   //No free client is found.
+   //Reset oldest (kick it out) and return that one
+   Serial.printf("Using oldest client (%i) with alive time of %i\r\n", iOldestClient, OldestClient.iLastActivityTime);
+   _ResetNetworkClient(OldestClient);
+   _DisconnectNetworkClient(OldestClient);
+   return OldestClient;
 }
 
 void NetworkServer::_ResetNetworkClient(_NetworkClient &Client)
@@ -189,21 +178,18 @@ void NetworkServer::_DisconnectNetworkClient(_NetworkClient &Client)
    Client.bClientConnected = false;
    Client.iLastActivityTime = 0;
    _ResetNetworkClient(Client);
-
 }
 
-NetworkServer::_NetworkClient& NetworkServer::_GetOldestClientWithDataComplete()
+NetworkServer::_NetworkClient &NetworkServer::_GetOldestClientWithDataComplete()
 {
    _NetworkClient &OldestClient = _NetworkClients[0];
    int i = 0;
    for (auto &Client : _NetworkClients)
    {
       //Check each client if it is older and has valid data
-      if (Client.iLastActivityTime < OldestClient.iLastActivityTime
-         && Client.strReceivedData.length() > 0
-         && Client.bDataComplete)
+      if (Client.iLastActivityTime < OldestClient.iLastActivityTime && Client.strReceivedData.length() > 0 && Client.bDataComplete)
       {
-         _NetworkClient& OldestClient = Client;
+         OldestClient = Client;
       }
       i++;
    }
@@ -222,7 +208,7 @@ void NetworkServer::_LogClientStates()
    uint8_t i = 0;
    for (auto &Client : _NetworkClients)
    {
-      Serial.printf("Client %i: C: %i | CO: %i | LaT: %lu\r\n", i, Client.bClientConnected, Client.ClientObj.connected(), Client.iLastActivityTime);
+      Serial.printf("Client %i: C: %i | CO: %i | LaT: %i\r\n", i, Client.bClientConnected, Client.ClientObj.connected(), Client.iLastActivityTime);
       i++;
    }
 }

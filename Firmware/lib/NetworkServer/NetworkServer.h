@@ -16,8 +16,8 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef _NetworkServerLib_h
-#define _NetworkServerLib_h
+#ifndef _NetworkServer_h
+#define _NetworkServer_h
 
 #if defined(ARDUINO) && ARDUINO >= 100
 #include "arduino.h"
